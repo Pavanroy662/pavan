@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Car Dealership</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <h1>Car Dealership</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#cars">Our Cars</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <h2>Your Next Car is Just a Click Away</h2>
+            <p>Browse our collection of premium cars for sale!</p>
+            <button onclick="location.href='#cars'">Explore Our Cars</button>
+        </div>
+    </section>
+
+    <section id="cars">
+        <h2>Our Cars</h2>
+        <div class="car-listings">
+            <div class="car">
+                <img src="https://via.placeholder.com/200" alt="Car 1">
+                <h3>Car Model 1</h3>
+                <p>$25,000</p>
+                <button class="btn">View Details</button>
+            </div>
+            <div class="car">
+                <img src="https://via.placeholder.com/200" alt="Car 2">
+                <h3>Car Model 2</h3>
+                <p>$30,000</p>
+                <button class="btn">View Details</button>
+            </div>
+            <div class="car">
+                <img src="https://via.placeholder.com/200" alt="Car 3">
+                <h3>Car Model 3</h3>
+                <p>$40,000</p>
+                <button class="btn">View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Car Dealership. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+/* Reset some basic styles */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+}
+
+.navbar h1 {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px;
+    background-color: #444;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #555;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #777;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.car-listings {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.car {
+    background-color: white;
+    padding: 20px;
+    width: 30%;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.car img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.car h3 {
+    margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Thank you for your message! We will get back to you soon.');
+});
